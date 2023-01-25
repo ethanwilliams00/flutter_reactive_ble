@@ -147,6 +147,10 @@ class FlutterReactiveBle {
     }
   }
 
+  Future<void> disconnectDevice({required String id}) async {
+    await _blePlatform.disconnectDevice(id);
+  }
+
   /// Reads the value of the specified characteristic.
   ///
   /// The returned future completes with an error in case of a failure during reading.
